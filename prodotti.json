@@ -1,0 +1,67 @@
+{
+    "prodotti":[
+        {
+            "categoria": "felpa",
+            "brand": "Palace",
+            "nome": "Flame Hood",
+            "colore": "Bianco",
+            "prezzo": "119,99€",
+            
+            "img": "https://images.stockx.com/images/Palace-Flame-Hood-White.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1653668839"
+        },
+        {
+            "categoria": "felpa",
+            "brand": "Cactus Plant Flea Market",
+            "nome": "Ye must be born again hoodie",
+            "colore": "blue",
+            "prezzo": "189,99€",
+            
+            "img": "https://images.stockx.com/images/Cactus-Plant-Flea-Market-Born-Again-Hooded-Sweatshirt-Blue.png?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1623202909&q=75"
+        },
+        {
+            "categoria": "T-shirt",
+            "brand": "Yeezy",
+            "nome": "Dove No Seam T-shirt",
+            "colore": "Bianco",
+            "prezzo": "89,99€",
+            
+            "img": "https://images.stockx.com/images/Yeezy-Gap-Engineered-by-Balenciaga-Dove-No-Seam-T-shirt-White.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1646086928&q=75"
+        },
+        {
+            "categoria": "Pantaloni Corti",
+            "brand": "Gramicci",
+            "nome": "SHELL PACKABLE SHORT",
+            "colore": "Beige",
+            "prezzo": "69,99€",
+            
+            "img": "https://cdn.shopify.com/s/files/1/0287/8721/2393/products/Sankeiusa620acb5ef41525620acb5ef4215.89260721620acb5ef4215_900x_e4be4c9f-6516-40a2-bdba-b76d08ec45be.jpg?v=1650447852"
+        },
+        {
+            "categoria": "Pantaloni",
+            "brand": "Evisu",
+            "nome": "Jeans Two-Layer Brushstroke Daicock",
+            "colore": "Nero",
+            "prezzo": "349,99€",
+            
+            "img": "https://cdn.shopify.com/s/files/1/0490/1869/9935/products/2ESHTM2JE90217CT3_700x.jpg?v=1651250384"
+        },
+        {
+            "categoria": "Giacca",
+            "brand": "Arc'teryx",
+            "nome": "BETA AR JACKET",
+            "colore": "Nero",
+            "prezzo": "399,99€",
+            
+            "img": "https://images.arcteryx.com/F22/1350x1710/Beta-AR-Jacket-Black.jpg"
+        },
+        {
+            "categoria": "Pantaloni Corti",
+            "brand": "Adidas",
+            "nome": "Short Hot Wheels x Sean Wotherspoon",
+            "colore": "Blu",
+            "prezzo": "59,99€",
+            
+            "img": "https://cdn.shopify.com/s/files/1/0070/1484/2420/products/HT6583MINTON_6_900x.png?v=1662136518"
+        }
+    ]
+}
