@@ -1,0 +1,202 @@
+<html>
+    <style>
+        #info_sup {
+            height: 7%;
+            width: 100%;
+            background: #B0C3C1;
+            border-radius: 20px;
+        }
+       
+        #home{
+            margin-left: 15px;
+            border: none;
+            background: #B0C3C1;
+
+        }
+
+        #shop{
+            border: none;
+            background: #B0C3C1;
+        }
+
+        #info{
+            border: none;
+            background: #B0C3C1;
+        }
+
+       
+
+
+        #carrello{
+            border: none;
+            background: #B0C3C1;
+            float: right;
+            margin-right: 20px;
+            margin-top: 20px;
+        }
+
+        #base{
+            background: #B0C3C1;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 25%;
+            max-width: 300px;
+            text-transform: capitalize;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: 10px;
+            border: 2px solid green;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            border-radius: 10px;
+            padding: 10px;
+            background: rgb(105,254,110);
+            background: linear-gradient(90deg, rgba(105,254,110,0.2) 0%, rgba(21,121,9,0.2) 99%);
+        }
+
+        .card:hover {
+            
+            background: rgb(105,254,110);
+            background: linear-gradient(90deg, rgba(105,254,110,0.5) 0%, rgba(21,121,9,0.5) 99%);
+        }
+
+        .qty {
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .card button {
+            margin-top: 15px;
+            width: 70%;
+            text-transform: capitalize;
+            background: linear-gradient(90deg, rgba(21,121,9,0.5) 0%, rgba(105,254,110,0.5) 99%);
+            border: 1px solid rgb(0, 0, 0, 0.7);
+            outline: none;
+            border-radius: 10px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .card button:hover {
+            cursor: pointer;
+            font-weight: 900;
+        }
+
+    </style>
+    <script>
+        const carrello = JSON.parse(localStorage.getItem('Carrello'));
+
+        const rimuoviDalCarrello = (nome) => {
+            if (carrello[nome]-1 === 0) {
+                delete carrello[nome]
+            } else {
+                carrello[nome]--
+            }
+            localStorage.setItem("Carrello", JSON.stringify(carrello));
+        }
+
+    </script>
+
+    <body>
+        <div id="info_sup">
+            <a href="commercee(1).html"> <button id="home"><h2>HypeClothing</h2></button></a>
+            <a href="shop.html"> <button id="shop">SHOP</button></a>
+            <a href="chisiamo.html"> <button id="info">CHI SIAMO</button></a>
+            <a href="carrello.html"> <button id="carrello">CARRELLO</button></a>
+        </div>
+
+        <div>
+            <h1>
+                Carrello
+            </h1>
+            <div id="base"></div>
+        </div>
+        <script>
+
+            (async () => {
+
+            const json = await fetch(http://localhost:5500/prodotti.json)
+            const { prodotti } = await json.json()
+
+            const base = document.getElementById("base")
+
+
+            for(prodotto in carrello) {
+
+                prodottoInfo = prodotti.filter(p => p.nome === prodotto)[0]
+
+
+                const card = document.createElement("div")
+
+                card.className = "card"
+                card.id = prodottoInfo.nome
+
+                // Categoria
+                var div = document.createElement("div")
+                div.innerHTML = prodottoInfo.categoria
+                card.appendChild(div)
+
+                // Brand
+                var div = document.createElement("div")
+                div.innerHTML = prodottoInfo.brand
+                card.appendChild(div)
+
+                // nome
+                var div = document.createElement("div")
+                div.innerHTML = prodottoInfo.nome
+                card.appendChild(div)
+
+                // Colore
+                var div = document.createElement("div")
+                div.innerHTML = prodottoInfo.colore
+                card.appendChild(div)
+
+                // Prezzo
+                var div = document.createElement("div")
+                div.innerHTML = prodottoInfo.prezzo
+                card.appendChild(div)
+
+                // Immagine
+                var div = document.createElement("img")
+                div.src = prodottoInfo.img
+                div.style.width = "100px"
+                card.appendChild(div)
+
+                // Quantita
+                var div = document.createElement("div")
+                div.innerHTML = "Quantità: " + carrello[prodotto]
+                div.className = "qty"
+                card.appendChild(div)
+
+                // rimuovi
+                var button = document.createElement("button")
+                button.innerHTML = "rimuovi 1 dal carrello"
+                card.appendChild(button)
+
+                button.addEventListener('click', function(e) {
+                    rimuoviDalCarrello(e.target.parentElement.id);
+                    window.location.reload();
+                }, false);
+
+                base.appendChild(card)
+            }
+        }
+    )()
+        
+            
+
+        
+        </script>
+
+
+    </body>
+</html>
